@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="assets/css/style.css"> 
+<title>Blv Dev</title>
+  </head>
+  <body>
+    <section id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+              <a class="navbar-brand">Blv Dev</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav w-50 m-auto d-flex justify-content-between">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nuestros servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>       
+    </section>
+    <section id="Home" class="home-section">
+        <div class="container mt-5">
+            <div class="row justify-content-end">  
+                <div class="col-md-6">
+                    <h1>Bienvenido</h1>
+                    <p>En Blv Dev, nos especializamos en crear soluciones digitales innovadoras que impulsan el crecimiento de tu negocio. Nuestro equipo de expertos está comprometido con ofrecer servicios de desarrollo web de alta calidad, optimización de plataformas y soporte personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>     
+    <section id="servicios" class="services-section py-4">
+        <div class="container">
+            <h2 class="text-center mb-4">Servicios</h2>
+            <div id="services-container" class="row"></div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-us-section py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Contáctenos</h2>
+              <p><strong>Dirección física:</strong><br>Av. Providencia 1234, Oficina 601, Providencia, Santiago, Chile</p>
+              <p><strong>Contacto telefónico:</strong><br>Teléfono: +56 2 1234 5678</p>
+              <p><strong>Dominio de la página web:</strong><br><a href="https://www.coningenio.cl" target="_blank">www.coningenio.cl</a></p>
+              <p><strong>Correo electrónico:</strong><br><a href="mailto:info@coningenio.cl">info@coningenio.cl</a></p>
+            </div>
+            
+            <div class="col-md-6">
+              <h3>Formulario de contacto</h3>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section id="about-us" class="py-4">
+        <div class="container">
+          <h2 class="mb-4 text-center">Nosotros</h2>
+          <div id="about-us-container" class="row text-center">
+          </div>
+        </div>
+      </section>
+      
+      <script src="assets/js/main.js"></script>
+      
+      
+  </body>
+</html>
