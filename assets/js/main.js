@@ -19,7 +19,7 @@ function obtenerServicios() {
     .catch(err => {
       console.error("Error al obtener servicios:", err);
       console.log("Usando mock para servicios...");
-      return mockServicios(); 
+      return mockServicios();
     });
 }
 
@@ -41,7 +41,7 @@ function obtenerNosotros() {
     .catch(err => {
       console.error("Error al obtener nosotros:", err);
       console.log("Usando mock para nosotros...");
-      return mockNosotros(); 
+      return mockNosotros();
     });
 }
 
@@ -62,29 +62,29 @@ function mostrarServicios(services) {
 }
 
 function mostrarNosotros(nosotros) {
-    const container = document.getElementById("about-us-container");
-  
-    nosotros.forEach((item, index) => {
-      const section = document.createElement("div");
-  
-      if (index === 0) {
-        section.className = "col-12 mb-4";
-        section.innerHTML = `
+  const container = document.getElementById("about-us-container");
+
+  nosotros.forEach((item, index) => {
+    const section = document.createElement("div");
+
+    if (index === 0) {
+      section.className = "col-12 mb-4";
+      section.innerHTML = `
           <h3 class="mb-3">${item.titulo.esp}</h3>
           <p>${item.descripcion.esp}</p>
         `;
-      } else {
-        section.className = "col-6 mb-4";
-        section.innerHTML = `
+    } else {
+      section.className = "col-6 mb-4";
+      section.innerHTML = `
           <h3>${item.titulo.esp}</h3>
           <p>${item.descripcion.esp}</p>
         `;
-      }
-  
-      container.appendChild(section);
-    });
-  }
-  
+    }
+
+    container.appendChild(section);
+  });
+}
+
 
 function mockServicios() {
   return [
@@ -137,30 +137,32 @@ Promise.all([obtenerServicios(), obtenerNosotros()])
     console.error("Error al obtener los datos:", err);
   });
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const service = document.getElementById("service").value.trim();
-    const message = document.getElementById("message").value.trim();
+  const name = document.getElementById("name").value.trim();
+  const service = document.getElementById("service").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-    if (!name || !service || !message) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
+  if (!name || !service || !message) {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
 
-    console.log("Formulario enviado:");
-    console.log("Nombre:", name);
-    console.log("Servicio seleccionado:", service);
-    console.log("Mensaje:", message);
+  console.log("Formulario enviado:");
+  console.log("Nombre:", name);
+  console.log("Servicio seleccionado:", service);
+  console.log("Mensaje:", message);
 
-    alert("Enviado :P");
-    this.reset(); 
-  });
+  alert("Enviado :P");
+  this.reset();
+});
 
-  document.getElementById("toggle-dark").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-  
-    const isDark = document.body.classList.contains("dark-mode");
-    this.textContent = isDark ? "Modo claro" : "Modo nocturno";
-  });
+document.getElementById("toggle-dark").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains("dark-mode");
+  this.textContent = isDark ? "Modo claro" : "Modo nocturno";
+});
+
+
