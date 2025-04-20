@@ -52,7 +52,7 @@ function mostrarServicios(services) {
     const col = document.createElement("div");
     col.className = "col-md-12 col-lg-6 mb-4";
     col.innerHTML = `
-      <div class="p-3 border rounded bg-white shadow-sm h-100"> 
+      <div class="p-3 border rounded service-card-dynamic shadow-sm h-100"> 
         <h4>${item.titulo.esp}</h4>
         <p>${item.descripcion.esp}</p>
       </div>
@@ -86,7 +86,6 @@ function mostrarNosotros(nosotros) {
   }
   
 
-// Mock de los servicios en caso de que falle la API
 function mockServicios() {
   return [
     {
@@ -112,7 +111,6 @@ function mockServicios() {
   ];
 }
 
-// Mock de la sección "Nosotros" en caso de que falle la API
 function mockNosotros() {
   return [
     {
@@ -130,7 +128,6 @@ function mockNosotros() {
   ];
 }
 
-// Llamamos a las funciones para obtener los datos y mostrarlos
 Promise.all([obtenerServicios(), obtenerNosotros()])
   .then(([servicios, nosotros]) => {
     mostrarServicios(servicios);
@@ -138,4 +135,32 @@ Promise.all([obtenerServicios(), obtenerNosotros()])
   })
   .catch(err => {
     console.error("Error al obtener los datos:", err);
+  });
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById("name").value.trim();
+    const service = document.getElementById("service").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !service || !message) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    console.log("Formulario enviado:");
+    console.log("Nombre:", name);
+    console.log("Servicio seleccionado:", service);
+    console.log("Mensaje:", message);
+
+    alert("Enviado :P");
+    this.reset(); 
+  });
+
+  document.getElementById("toggle-dark").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  
+    const isDark = document.body.classList.contains("dark-mode");
+    this.textContent = isDark ? "Modo claro" : "Modo nocturno";
   });

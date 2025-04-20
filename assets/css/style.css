@@ -11,7 +11,10 @@
     justify-content: center; 
     align-items: center;  
 }
-
+a{
+    color: black;
+    text-decoration: none;
+}
 .home-section::before {
     content: '';
     position: absolute;
@@ -108,3 +111,88 @@ body {
     font-size: 1.1rem;
   }
   
+
+/* modo nocturno */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode a {
+    color: #9ecdfc;
+  }
+  
+  body.dark-mode .navbar,
+  body.dark-mode .card,
+  body.dark-mode .form-control,
+  body.dark-mode .btn,
+  body.dark-mode .service-card {
+    background-color: #1f1f1f !important;
+    color: #f1f1f1 !important;
+    border-color: #333;
+  }
+  
+  body.dark-mode .navbar .nav-link {
+    color: #ddd !important;
+  }
+  
+  body.dark-mode .navbar-light .navbar-toggler {
+    border-color: #777;
+  }
+  
+  body.dark-mode .home-section::before {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  body.dark-mode .services-section {
+    background-color: #1c1c1c;
+  }
+  
+  body.dark-mode .service-card h3 {
+    color: #64b5f6;
+  }
+  
+  body.dark-mode .service-card ul li,
+  body.dark-mode .service-card p {
+    color: #ccc;
+  }
+  
+  body.dark-mode .contact-us-section {
+    background-color: #1c1c1c;
+  }
+  
+  body.dark-mode .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  body.dark-mode .btn-primary {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  .service-card-dynamic {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  body.dark-mode .service-card-dynamic {
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+  }
+  
+  .services-section {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .services-section {
+    background-color: #121212; /* Fondo oscuro */
+    color: #f1f1f1;             /* Texto claro */
+}
+body.dark-mode .services-section h2,
+body.dark-mode .services-section p,
+body.dark-mode .services-section h4 {
+    color: #f1f1f1;
+}
